@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <style>
+    @font-face {
+      font-family: 'Corbel';
+      src: url('fonts/CORBEL.TTF') format('truetype');
+    }
+    @font-face {
+      font-family: 'Gothic';
+      src: url('fonts/PathwayGothicOne-Regular.ttf') format('truetype');
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff; /* white background */
+      font-family: 'Gothic', sans-serif;
+      letter-spacing: 0.6vh;
+      color: #000000; /* black text color */
+    }
+    .container {
+      max-width: 40vw;
+      margin: 0 auto;
+      padding: 20px;
+      padding-top: 0vh;
+    }
+    .image-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+    }
+    .text-box {
+      letter-spacing: 0vh;
+      font-size: 1.4vw;
+      line-height: 1.5;
+      font-family: 'Corbel';
+    }
+      
+    header {
+      text-align: center;
+      margin-top: 3vh;
+      margin-bottom: 3vh;
+      font-size: 2.8vw;
+      letter-spacing: 0.6vh;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #ffffff; /* White background */
+      font-size: 1.5vw;
+      margin-bottom: 4vh
+    }
+    .left-text,
+    .right-text {
+      margin: 0 10vw; /* Adjust the margin as needed */
+    }
+    .instagram-logo {
+      width: 2.5vw;
+      /* other styles as needed */
+    }
+    a {
+      color: #000000; /* black text color */
+      text-decoration: none; /* remove underlines */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>ABOUT</header>
+  <div class="image-container">
+    <img src="website_images/aboutimg.jpg" alt="Your Name">
+  </div>
+  <div class="text-box">
+Hey, I’m Sam! I started learning about photography a couple years ago and I’ve loved taking pictures ever since. I love capturing wide landscapes, nature, friends, or anything that the sun shines on! Recently, I have been learning how to shoot and develop 35mm film. I can’t wait to update this with new photos soon!
+  </div>
+</div>
+
+<div class="logo-container">
+  <span class="left-text">
+    <a target="_blank" href="https://www.sambradleyphotography.com/">SAM BRADLEY PHOTOGRAPHY</a>
+  </span>
+  <a target="_blank" href="https://www.instagram.com/coolpeoplewarmcolors/">
+    <img src="website_images/blackiglogo" alt="Instagram Logo" class="instagram-logo">
+  </a>
+  <span class="right-text">
+    <a target="_blank" href="https://www.instagram.com/coolpeoplewarmcolors/">COOL PEOPLE WARM COLORS</a>
+  </span>
+</div>
+
+</body>
+</html>
