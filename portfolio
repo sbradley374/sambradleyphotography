@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @font-face {
+            font-family: 'Gothic';
+            src: url('fonts/PathwayGothicOne-Regular.ttf') format('truetype');
+        }
+
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            font-family: 'Gothic';
+            letter-spacing: 0.6vh;
+        }
+
+        header {
+            text-align: center;
+            margin-top: 5vh;
+            font-size: 2.8vw;
+            font-family: 'Gothic';
+            letter-spacing: 0.6vh;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        img {
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        /* Main CSS */
+        .grid-wrapper > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-wrapper > div > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .grid-wrapper {
+            display: grid;
+            grid-gap: 1vw;
+            grid-template-columns: repeat(auto-fit, minmax(7vw, 1fr));
+            grid-auto-rows: 7vw;
+            grid-auto-flow: dense;
+            padding: 6vw;
+            padding-top: 5vh;
+            padding: 3vw;
+        }
+
+        .grid-wrapper .wide {
+            grid-column: span 7;
+            grid-row: span 3;
+        }
+
+        .grid-wrapper .tall {
+            grid-column: span 3;
+            grid-row: span 4;
+        }
+        .grid-wrapper .verytall {
+            grid-column: span 4;
+            grid-row: span 6;
+        }
+        .grid-wrapper .taller {
+            grid-column: span 3;
+            grid-row: span 5;
+        }
+
+        .grid-wrapper .big {
+            grid-column: span 4;
+            grid-row: span 3;
+        }
+        
+        .grid-wrapper .verybig {
+            grid-column: span 5;
+            grid-row: span 4;
+        }
+        
+        .grid-wrapper .fivefour {
+            grid-column: span 5;
+            grid-row: span 4;
+        }
+        
+        .grid-wrapper .threethree {
+            grid-column: span 3;
+            grid-row: span 3;
+        }
+        
+        .grid-wrapper .sixfour {
+            grid-column: span 6;
+            grid-row: span 4;
+        }
+        
+        .fullscreen-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            cursor: pointer; /* Add this line to change cursor when hovering over the overlay */
+        }
+
+        .close-btn {
+            color: white;
+            font-size: 2em;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        .fullscreen-photo {
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+            display: block;
+        }
+
+        .grid-wrapper img {
+            cursor: pointer; /* Add this line to change cursor when hovering over an image */
+        }
+        
+        .grid-wrapper img:hover {
+            transform: scale(1.032);
+            transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+            
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom:3vw;
+            font-size: 1.5vw;
+        }
+        
+        .left-text,
+        .right-text {
+            margin: 0 10vw; /* Adjust the margin as needed */
+        }
+        
+        .instagram-logo {
+            width: 3vw;
+            /* other styles as needed */
+        }
+
+
+            
+    </style>
+</head>
+<body>
+    <header>PORTFOLIO</header>
+    <div class="grid-wrapper">
+
+        <div class="wide" data-thumbnail="website_images/pastelboatthumb.jpg" data-fullscreen="website_images/pastelboat.jpg">
+            <img src="website_images/pastelboatthumb.jpg" alt="pastelboat">
+        </div>
+        <div class="big" data-thumbnail="website_images/beachhutthumb.jpg" data-fullscreen="website_images/beachhut.jpg">
+            <img src="website_images/beachhutthumb.jpg" alt="beachhut">
+        </div>
+
+        <div class="big" data-thumbnail="website_images/leavesthumb.jpg" data-fullscreen="website_images/leaves.jpg">
+            <img src="website_images/leavesthumb.jpg" alt="leaves">
+        </div>
+
+        <div class="wide" data-thumbnail = "website_images/chappypanothumb.jpg" data-fullscreen="website_images/chappypano.jpg">
+            <img src="website_images/chappypanothumb.jpg" alt="chappypano">
+        </div>
+        
+        <div class="tall" data-thumbnail = "website_images/tomwestythumb.jpg" data-fullscreen="website_images/tomwesty.jpg">
+            <img src="website_images/tomwestythumb.jpg" alt="tompic">
+        </div>
+        <div class="fivefour" data-thumbnail = "website_images/mainerunthumb.jpg" data-fullscreen="website_images/mainerun.jpg">
+            <img src="website_images/mainerunthumb.jpg" alt="mainerun">
+        </div>
+        
+        <div class="tall" data-thumbnail = "website_images/waterfrontrulesthumb.jpg" data-fullscreen="website_images/waterfrontrules.jpg">
+            <img src="website_images/waterfrontrulesthumb.jpg" alt="westhillsign">
+        </div>
+
+        <div class="wide" data-thumbnail = "website_images/chappytreethumb.jpg" data-fullscreen="website_images/chappytree.jpg">
+            <img src="website_images/chappytreethumb.jpg" alt="chappytree">
+        </div>
+        <div class="big" data-thumbnail = "website_images/westyandersonthumb.jpg" data-fullscreen="website_images/westyanderson.jpg">
+            <img src="website_images/westyandersonthumb.jpg" alt="westy anderson">  
+        </div>
+
+        <div class="verytall" data-thumbnail="website_images/greenhousethumb.jpg" data-fullscreen="website_images/crazydreambuilding6.jpg">
+            <img src="website_images/greenhousethumb.jpg" alt="house!">  
+        </div>
+        <div class="wide" data-thumbnail="website_images/palmtreesthumb.jpg" data-fullscreen="website_images/palmtrees.jpg">
+            <img src="website_images/palmtreesthumb.jpg" alt="palm trees">  
+        </div>
+        <div class="wide" data-thumbnail="website_images/chappypolethumb.jpg" data-fullscreen="website_images/chappypole.jpg">
+            <img src="website_images/chappypolethumb.jpg" alt="chappypole">  
+        </div>
+        <div class="fivefour" data-thumbnail = "website_images/coloradobridgethumb.jpg" data-fullscreen="website_images/coloradobridge.jpg">
+            <img src="website_images/coloradobridgethumb.jpg" alt="coloradobridge">
+        </div>
+        <div class="sixfour" data-thumbnail="website_images/rosebudthumb2.jpg" data-fullscreen="website_images/rosebud2.jpg">
+            <img src="website_images/rosebudthumb2.jpg" alt="rosebud">  
+        </div>
+        
+        <div class="tall" data-thumbnail="website_images/bigrockthumb.jpg" data-fullscreen="website_images/bigrock.jpg">
+            <img src="website_images/bigrockthumb.jpg" alt="big rock">  
+        </div>
+        
+        <div class="fivefour" data-thumbnail="website_images/hikethumb.jpg" data-fullscreen="website_images/hike.jpg">
+            <img src="website_images/hikethumb.jpg" alt="hike">  
+        </div>
+        <div class="tall" data-thumbnail="website_images/birdhutthumb.jpg" data-fullscreen="website_images/birdhut.jpg">
+            <img src="website_images/birdhutthumb.jpg" alt="birdhut">  
+        </div>
+        <div class="wide" data-thumbnail="website_images/beachchairscapethumb.jpg" data-fullscreen="website_images/beachchairscape.jpg">
+            <img src="website_images/beachchairscapethumb.jpg" alt="beachchairscape">  
+        </div>
+        <div class="big" data-thumbnail="website_images/birdsthumb.jpg" data-fullscreen="website_images/birds.jpg">
+            <img src="website_images/birdsthumb.jpg" alt="birds">  
+        </div>
+        <div class="tall" data-thumbnail="website_images/sanfran2thumb2.jpg" data-fullscreen="website_images/sanfran2.jpg">
+            <img src="website_images/sanfran2thumb2.jpg" alt="sanfran2">  
+        </div>
+        <div class="fivefour" data-thumbnail="website_images/sanfranviewthumb.jpg" data-fullscreen="website_images/sanfranview.jpg">
+            <img src="website_images/sanfranviewthumb.jpg" alt="sanfranview">  
+        </div>
+        <div class="tall" data-thumbnail="website_images/sanfranwallthumb.jpg" data-fullscreen="website_images/sanfranwall.jpg">
+            <img src="website_images/sanfranwallthumb.jpg" alt="sanfranwall">  
+        </div>
+        <div class="sixfour" data-thumbnail="website_images/atheneumthumb.jpg" data-fullscreen="website_images/atheneum.jpg">
+            <img src="website_images/atheneumthumb.jpg" alt="atheneum">  
+        </div>
+        <div class="fivefour" data-thumbnail="website_images/tablethumb.jpg" data-fullscreen="website_images/table.jpg">
+            <img src="website_images/tablethumb.jpg" alt="table">  
+        </div>
+        <div class="tall" data-thumbnail="website_images/anniespencethumb.jpg" data-fullscreen="website_images/anniespence.jpg">
+            <img src="website_images/anniespencethumb.jpg" alt="anniespence">  
+        </div>
+        
+        <div class="fivefour" data-thumbnail="website_images/spencefennerthumb.jpg" data-fullscreen="website_images/spencefenner.jpg">
+            <img src="website_images/spencefennerthumb.jpg" alt="spencefenner">  
+        </div>
+
+        <div class="tall" data-thumbnail="website_images/beachgrassthumb.jpg" data-fullscreen="website_images/beachgrass.jpg">
+            <img src="website_images/beachgrassthumb.jpg" alt="beachgrass">  
+        </div>
+        
+        <div class="wide" data-thumbnail="website_images/bostonskylinethumb.jpg" data-fullscreen="website_images/bostonskyline.jpg">
+            <img src="website_images/bostonskylinethumb.jpg" alt="bostonskyline">  
+        </div>
+        <div class="big" data-thumbnail="website_images/birdlookingatmethumb.jpg" data-fullscreen="website_images/birdlookingatme.jpg">
+            <img src="website_images/birdlookingatmethumb.jpg" alt="bird!">  
+        </div>
+        <div class="tall" data-thumbnail="website_images/lightthumb.jpg" data-fullscreen="website_images/light.jpg">
+            <img src="website_images/lightthumb.jpg" alt="light">  
+        </div>
+        <div class="fivefour" data-thumbnail="website_images/bwtrainthumb.jpg" data-fullscreen="website_images/bwtrain.jpg">
+            <img src="website_images/bwtrainthumb.jpg" alt="bwtrain">  
+        </div>
+        <div class="tall" data-thumbnail="website_images/christmastreethumb.jpg" data-fullscreen="website_images/christmastree.jpg">
+            <img src="website_images/christmastreethumb.jpg" alt="xmastree">  
+        </div>
+        <div class="big" data-thumbnail="website_images/airplanethumb.jpg" data-fullscreen="website_images/airplane.jpg">
+            <img src="website_images/airplanethumb.jpg" alt="planeinsky">  
+        </div>
+        <div class="big" data-thumbnail="website_images/livemusicthumb.jpg" data-fullscreen="website_images/livemusic.jpg">
+            <img src="website_images/livemusicthumb.jpg" alt="cubanbar">  
+        </div>
+        <div class="threethree" data-thumbnail="website_images/moonlightthumb.jpg" data-fullscreen="website_images/moonlight.jpg">
+            <img src="website_images/moonlightthumb.jpg" alt="moonlight">  
+        </div>
+
+
+    </div>
+    
+    <div class="logo-container">
+        <span class="left-text">
+            <a target="_blank" href="https://www.sambradleyphotography.com/">
+                SAM &nbspBRADLEY &nbspPHOTOGRAPHY
+            </a>
+        </span>
+        <a target="_blank" href="https://www.instagram.com/coolpeoplewarmcolors/">
+            <img src="website_images/blackiglogo" alt="Logo" class="instagram-logo">
+        </a>
+        <span class="right-text">
+            <a target="_blank" href="https://www.instagram.com/coolpeoplewarmcolors/">
+                &nbspCOOL PEOPLE WARM COLORS
+            </a>
+        </span>
+    </div>
+
+
+
+
+    
+
+
+    <div class="fullscreen-overlay" onclick="closeFullscreen()">
+        <span class="close-btn" onclick="closeFullscreen()">&times;</span>
+        <img class="fullscreen-photo">
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const images = document.querySelectorAll('.grid-wrapper div');
+        const fullscreenOverlay = document.querySelector('.fullscreen-overlay');
+        const fullscreenPhoto = document.querySelector('.fullscreen-photo');
+
+        images.forEach(function (div) {
+            div.addEventListener('click', function () {
+                openFullscreen(this);
+            });
+        });
+
+        fullscreenOverlay.addEventListener('click', function () {
+            closeFullscreen();
+        });
+
+        function openFullscreen(element) {
+            const thumbnailSrc = element.dataset.thumbnail;
+            const fullscreenSrc = element.dataset.fullscreen;
+
+            fullscreenPhoto.src = fullscreenSrc;
+            fullscreenOverlay.style.display = 'flex';
+        }
+
+        function closeFullscreen() {
+            fullscreenOverlay.style.display = 'none';
+        }
+    });
+    
+    
+</script>
+    </body>
+</html>

@@ -1,0 +1,166 @@
+body {
+    font-family: 'Gothic', 'Hanken', 'Helmet Neue','Rift Light', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('website_images/home1.jpg');
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center;
+    background-attachment: fixed; /* Fixes the background position */
+    height: 100vh; /* Set the height to the full viewport height */
+    width: 100vw;
+    letter-spacing: .6vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9vw;
+}
+
+.header-element {
+    flex: 0;
+    text-align: center;
+    font-size: 4vw;
+    color: white;
+    opacity: 0; /* Set initial opacity to 0 */
+    animation: fadeIn 1.4s ease-in-out forwards; /* Animation properties */
+    transition: color 0.1s ease;
+    margin-right: 0vw;
+  }
+
+.middle-element {
+    position: relative;
+    font-size: 4vw;
+    color: white;
+    opacity: 0; /* Set initial opacity to 0 */
+    animation: fadeIn 1.4s ease-in-out forwards; /* Animation properties */
+    transition: color 0.1s ease;
+    margin-right: 2vw;
+    margin-left: 0vw;
+}
+
+
+.instagram-logo {
+    width: 2.7vw;
+    color: white;
+    animation: fadeIn 1.4s ease-in-out forwards; /* Animation properties */
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 3.5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: color 0.1s ease;
+}
+
+a {
+    color: inherit; /* Use the default text color */
+    text-decoration: none; /* Remove underline */
+    /* You can add additional styles as needed */
+}
+
+
+
+h1 {
+    margin: 0;
+    /* line-height: 4vw; */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 1vw;
+    }
+
+    .header-element,
+    .middle-element {
+        font-size: 6vw;
+    }
+
+        instagram-logo {
+        width: 15vw;
+    }
+}
+
+  
+.middle-element:hover {
+    color: gainsboro; /* Change to the desired darker color */
+}
+
+.header-element:hover {
+    color: gainsboro; /* Change to the desired darker color */
+}
+
+@font-face {
+    font-family: 'Playfair';
+    src: url('fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+    /* You may also use other formats like woff, woff2, ttf based on browser support */
+    font-weight: 120;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hanken';
+    src: url('fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+    /* You may also use other formats like woff, woff2, ttf based on browser support */
+    font-weight: 260;
+}
+
+@font-face {
+    font-family: 'Gothic';
+    src: url('fonts/PathwayGothicOne-Regular.ttf') format('truetype');
+    /* You may also use other formats like woff, woff2, ttf based on browser support */
+}
+
+@font-face {
+    font-family: 'Rift Light';
+    src: url('fonts/Rift Light.otf') format('opentype');
+    /* You may also use other formats like woff, woff2, ttf based on browser support */
+}
+
+@font-face {
+    font-family: 'Sofia';
+    src: url('fonts/SofiaSansSemiCondensed[wght].ttf') format('truetype');
+    /* You may also use other formats like woff, woff2, ttf based on browser support */
+}
+
+@font-face {
+    font-family: 'Tolyer No.1';
+    src: local('fonts/Tolyer No.1 Light'), local('fonts/Tolyer-No.1-Light'),
+        url('fonts/TolyerNo1-Light.woff2') format('woff2'),
+        url('fonts/TolyerNo1-Light.woff') format('woff'),
+        url('fonts/TolyerNo1-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Tolyer No.2';
+    src: local('Tolyer No.1 Medium'), local('Tolyer-No.1-Medium'),
+        url('fonts/TolyerNo1-Medium.woff2') format('woff2'),
+        url('fonts/TolyerNo1-Medium.woff') format('woff'),
+        url('fonts/TolyerNo1-Medium.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Tolyer No.3';
+    src: local('Tolyer No.1 Regular'), local('Tolyer-No.1-Regular'),
+        url('fonts/TolyerNo1-Regular.woff2') format('woff2'),
+        url('fonts/TolyerNo1-Regular.woff') format('woff'),
+        url('fonts/TolyerNo1-Regular.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
